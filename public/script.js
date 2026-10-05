@@ -1,6 +1,6 @@
 const CONFIG = {
   senderName: "Максим",
-  girlName: "",
+  girlName: "Юля",
   turnstileSiteKey: "0x4AAAAAAFOI7mOSW4PzFj7n"
 };
 
