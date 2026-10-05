@@ -84,7 +84,7 @@ function personalize() {
   const name = CONFIG.senderName.trim() || "Максим";
   $("greeting").textContent = `${CONFIG.girlName.trim() ? CONFIG.girlName.trim() + ", у" : "У"} меня к тебе серьёзный вопрос`;
   $("signature").textContent = `— ${name} ♡`;
-  document.title = CONFIG.girlName.trim() ? `Для ${CONFIG.girlName.trim()} ♡` : "Для тебя ♡";
+  document.title = CONFIG.girlName.trim() ? `${CONFIG.girlName.trim()}, приглашение на свидание ♡` : "Для тебя ♡";
 }
 
 function validDate(value) {
