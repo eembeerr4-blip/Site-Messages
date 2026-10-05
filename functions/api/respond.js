@@ -47,7 +47,10 @@ export async function handleRespond(context, upstreamFetch = fetch, now = Date.n
   const { request, env } = context;
   if (request.method !== "POST") return fail(405, "METHOD_NOT_ALLOWED", { Allow: "POST" });
   const url = new URL(request.url);
-  if (request.headers.get("Origin") !== url.origin) return fail(403, "ORIGIN_NOT_ALLOWED");
+  const origin = request.headers.get("Origin");
+  const workerOrigin = "https://date-invitation.makszagar001.workers.dev";
+  if (origin !== url.origin && !(url.hostname === "date-invitation-7yx.pages.dev" && origin === workerOrigin)) return fail(403, "ORIGIN_NOT_ALLOWED");
+  const visitorHostname = new URL(origin).hostname;
   const fetchSite = request.headers.get("Sec-Fetch-Site");
   if (fetchSite && fetchSite !== "same-origin") return fail(403, "ORIGIN_NOT_ALLOWED");
   if (request.headers.get("Content-Type")?.split(";")[0].trim().toLowerCase() !== "application/json") return fail(415, "JSON_REQUIRED");
@@ -98,7 +101,7 @@ export async function handleRespond(context, upstreamFetch = fetch, now = Date.n
       }, 5000);
     } catch { return fail(503, "VERIFICATION_UNAVAILABLE"); }
     if (!verification.response.ok || verification.answer?.success !== true ||
-        verification.answer.hostname !== url.hostname || verification.answer.action !== "date_response") return fail(403, "VERIFICATION_FAILED");
+        verification.answer.hostname !== visitorHostname || verification.answer.action !== "date_response") return fail(403, "VERIFICATION_FAILED");
 
     if (!(await storage.claim(body.requestId, payloadHash, now))) {
       const current = await storage.get(body.requestId);

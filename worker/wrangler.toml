@@ -1,0 +1,4 @@
+name = "date-invitation"
+main = "proxy.js"
+compatibility_date = "2026-10-05"
+workers_dev = true
