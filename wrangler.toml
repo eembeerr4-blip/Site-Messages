@@ -4,3 +4,9 @@ compatibility_date = "2026-10-05"
 
 [vars]
 SENDER_NAME = "Максим"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "date-invitation-state"
+database_id = "360fa8bc-a2f5-4347-866c-d0464cc93184"
+migrations_dir = "migrations"

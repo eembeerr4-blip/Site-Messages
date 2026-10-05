@@ -1,7 +1,7 @@
 const CONFIG = {
   senderName: "Максим",
   girlName: "",
-  turnstileSiteKey: ""
+  turnstileSiteKey: "0x4AAAAAAFOI7mOSW4PzFj7n"
 };
 
 const $ = (id) => document.getElementById(id);
