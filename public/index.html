@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f0717">
+  <meta name="description" content="Одно маленькое приглашение. Один особенный вечер. ♡">
+  <meta name="application-name" content="Приглашение на свидание">
+  <meta name="app-version" content="20261005-telegram-2">
+  <title>Приглашение на свидание ♡</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%231a0b24'/%3E%3Cpath d='M16 25L6 15C-1 5 13 2 16 10C20 2 33 6 26 15Z' fill='%23ef91b6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css?v=20261005-telegram-2">
+  <script src="script.js?v=20261005-telegram-2" defer></script>
+</head>
+<body>
+  <div class="ambience" aria-hidden="true"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="orb orb-three"></div><div id="particles"></div></div>
+  <svg class="svg-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <linearGradient id="fur" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#fff6f3"/><stop offset="1" stop-color="#decae2"/></linearGradient>
+      <linearGradient id="heart" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#ffa8cd"/><stop offset="1" stop-color="#ce538d"/></linearGradient>
+      <symbol id="cat" viewBox="0 0 220 210">
+        <ellipse cx="110" cy="193" rx="57" ry="6" fill="#e6a3cc" opacity=".14"/>
+        <path d="M149 173 C181 182 192 160 178 149" fill="none" stroke="#cbb5d3" stroke-width="13" stroke-linecap="round"/>
+        <path d="M76 111 C63 137 65 170 73 182 Q110 195 148 182 C157 158 153 128 143 111Z" fill="url(#fur)"/>
+        <path d="M59 70 L61 28 Q62 22 68 27 L91 49 Q110 42 132 49 L154 27 Q160 22 161 29 L163 71 C179 103 155 125 111 125 C67 125 43 102 59 70Z" fill="url(#fur)" stroke="#f5e6f4" stroke-width="1.5"/>
+        <path d="M68 36 L69 61 L83 52Z M153 36 L140 53 L154 61Z" fill="#dda5c4" opacity=".7"/>
+        <path d="M100 49 Q111 44 122 49" fill="none" stroke="#fffaf8" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+        <g class="cat-eyes"><ellipse cx="88" cy="85" rx="4.5" ry="6.5" fill="#493447"/><ellipse cx="133" cy="85" rx="4.5" ry="6.5" fill="#493447"/><circle cx="89" cy="83" r="1.3" fill="#fff"/><circle cx="134" cy="83" r="1.3" fill="#fff"/></g>
+        <g class="happy-eyes" fill="none" stroke="#493447" stroke-width="3" stroke-linecap="round"><path d="M82 87 Q88 78 94 87 M127 87 Q133 78 139 87"/></g>
+        <ellipse cx="78" cy="99" rx="8" ry="4" fill="#de91b5" opacity=".45"/><ellipse cx="143" cy="99" rx="8" ry="4" fill="#de91b5" opacity=".45"/>
+        <path d="M107 94 Q110 92 114 94 L110 98Z" fill="#b57c9c"/>
+        <path d="M110 98 Q106 104 102 100 M110 98 Q114 104 118 100" fill="none" stroke="#926b85" stroke-width="1.7" stroke-linecap="round"/>
+        <path d="M67 92 L49 89 M66 99 L47 101 M155 92 L173 89 M156 99 L175 101" fill="none" stroke="#b99bbc" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>
+        <ellipse cx="88" cy="184" rx="18" ry="8" fill="#ead9e9"/><ellipse cx="132" cy="184" rx="18" ry="8" fill="#ead9e9"/>
+        <g class="held-heart"><path d="M110 172 C96 161 79 151 81 136 C83 119 103 122 110 133 C118 121 138 121 140 136 C142 150 124 163 110 172Z" fill="url(#heart)"/><path d="M89 136 Q90 130 96 130" fill="none" stroke="#ffe0ef" stroke-width="3" stroke-linecap="round" opacity=".8"/></g>
+        <path d="M79 136 Q68 136 73 148 Q79 157 87 149 Q91 143 79 136Z M142 136 Q153 136 148 148 Q141 157 134 149 Q130 143 142 136Z" fill="url(#fur)" stroke="#f4e3ef" stroke-width="1"/>
+      </symbol>
+    </defs>
+  </svg>
+  <main class="stage">
+    <div class="outside-note" aria-hidden="true">МАЛЕНЬКОЕ ПРИГЛАШЕНИЕ · БОЛЬШОЙ ПОВОД</div>
+    <div class="card" id="card">
+      <section class="screen active" id="invitation" aria-labelledby="question">
+        <div class="card-mark" aria-hidden="true">♡</div>
+        <svg class="cat-art" aria-hidden="true"><use href="#cat"/></svg>
+        <p class="eyebrow" id="greeting">У меня к тебе серьёзный вопрос</p>
+        <h1 id="question" tabindex="-1">Пойдёшь со мной<br><span>на свидание?</span></h1>
+        <p class="description">Обещаю хорошее время, приятную атмосферу и минимум неловких пауз.</p>
+        <p class="cat-vote">Котик, кстати, тоже за ♡</p>
+        <div class="actions">
+          <button class="button primary" id="yes" aria-label="Да, пойду на свидание">Да ♡</button>
+          <div class="no-zone" id="no-zone"><button class="button secondary" id="no" aria-label="Нет, отказаться от приглашения">Нет</button></div>
+        </div>
+        <p class="footnote">Один вечер. Только мы.</p>
+      </section>
+      <section class="screen" id="confirmation" aria-labelledby="confirmation-title" hidden inert>
+        <div class="confirmation-heart" aria-hidden="true">♡</div>
+        <h2 id="confirmation-title" tabindex="-1">Ура ♡<br>Теперь выберем день</h2>
+        <div class="loading-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+      </section>
+      <section class="screen" id="schedule" aria-labelledby="schedule-title" hidden inert>
+        <p class="eyebrow">Один вечер для нас</p>
+        <h2 id="schedule-title" tabindex="-1">Какой день тебе<br>удобнее? ♡</h2>
+        <div class="selection-scroll" id="selection-scroll" role="region" aria-label="Выбор даты и времени" tabindex="0">
+          <div class="month-label">Октябрь <span>2026</span></div>
+          <div class="weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+          <div class="date-grid" id="date-grid" role="group" aria-label="Даты октября 2026 года"></div>
+          <div class="time-section" id="time-section" hidden>
+            <div class="selection-divider" aria-hidden="true">♡</div>
+            <h3 id="time-title">А во сколько?</h3>
+            <div class="time-grid" id="time-grid" role="group" aria-labelledby="time-title"></div>
+          </div>
+        </div>
+        <p class="selection-summary" id="selection-summary" role="status" aria-live="polite" aria-atomic="true">Выбери день, а затем время</p>
+        <div id="verification" class="verification" aria-label="Проверка безопасности"></div>
+        <p class="submit-status" id="submit-status" role="status" aria-live="polite" aria-atomic="true" hidden></p>
+        <button class="button primary" id="confirm" aria-label="Подтвердить выбранные дату и время" disabled>Подтвердить ♡</button>
+      </section>
+      <section class="screen" id="final" aria-labelledby="final-title" hidden inert>
+        <div class="card-mark" aria-hidden="true">♡</div>
+        <svg class="cat-art happy" aria-hidden="true"><use href="#cat"/></svg>
+        <p class="eyebrow">Всё, договорились ♡</p>
+        <h2 class="script-title" id="final-title" tabindex="-1">До встречи!</h2>
+        <div class="details"><p class="date"><span aria-hidden="true">♡</span> <span id="date"></span></p><p class="time" id="time"></p></div>
+        <p class="final-copy">Буду ждать и немного волноваться.<br>Надеюсь, ты тоже ♡.<br><span>Остальное я беру на себя.</span></p>
+        <p class="signature" id="signature"></p>
+      </section>
+      <section class="screen refusal" id="refusal" aria-labelledby="refusal-title" hidden inert>
+        <svg class="cat-art" aria-hidden="true"><use href="#cat"/></svg>
+        <h2 id="refusal-title" tabindex="-1">Хорошо ♡</h2>
+        <p class="description">Я всё равно рад, что ты открыла<br>это приглашение.</p>
+        <button class="button secondary return" id="back" aria-label="Вернуться к приглашению">Вернуться</button>
+      </section>
+      <div id="burst" aria-hidden="true"></div>
+    </div>
+    <div class="outside-footer" aria-hidden="true">С ТЕПЛОМ И НЕМНОГО С ВОЛНЕНИЕМ <span>♡</span></div>
+  </main>
+  <noscript><p class="noscript">Для интерактивного приглашения включите JavaScript в браузере.</p></noscript>
+</body>
+</html>
